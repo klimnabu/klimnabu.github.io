@@ -199,3 +199,19 @@ footer {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { border-radius: 8px; }
+.hero-mark {
+  border-radius: 18px;
+  margin-bottom: 26px;
+  filter: drop-shadow(0 10px 40px rgba(124, 92, 255, 0.45));
+  animation: floaty 5s ease-in-out infinite;
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-mark { animation: none; }
+}
