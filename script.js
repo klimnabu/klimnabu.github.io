@@ -1,5 +1,3 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
