@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Theft Auto VI — Welcome to Leonida</title>
+  <meta name="description" content="Vice City, the Leonida Keys, Grassrivers. Two outlaws, one state of mind. Out now on PlayStation 5 and Xbox Series X|S." />
+  <meta name="theme-color" content="#08030f" />
+  <meta property="og:title" content="Grand Theft Auto VI — Welcome to Leonida" />
+  <meta property="og:description" content="Two outlaws, one state of mind. Out now on PS5 and Xbox Series X|S." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/hero.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- ── boot curtain ─────────────────────────────────────────────────── -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-mark"><span>VI</span></div>
+    <div class="boot-bar"><i></i></div>
+    <p class="boot-note">Loading Leonida…</p>
+  </div>
+
+  <div class="vhs" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+
+  <!-- ── nav ─────────────────────────────────────────────────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top" aria-label="Grand Theft Auto VI, back to top">
+        <span class="logo-mark">VI</span>
+        <span class="logo-text">Grand Theft Auto</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#story" data-spy>Story</a>
+        <a href="#leonida" data-spy>Leonida</a>
+        <a href="#features" data-spy>Features</a>
+        <a href="#media" data-spy>Media</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="nav-clock" id="vcClock" title="Vice City local time">--:--</span>
+        <a class="btn btn-buy" href="#editions">Buy now</a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navSheet" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav-sheet" id="navSheet" hidden>
+      <a href="#story" data-spy>Story <em>01</em></a>
+      <a href="#leonida" data-spy>Leonida <em>02</em></a>
+      <a href="#features" data-spy>Features <em>03</em></a>
+      <a href="#media" data-spy>Media <em>04</em></a>
+      <a href="#editions" data-spy>Editions <em>05</em></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── hero ──────────────────────────────────────────────────────── -->
+    <section class="hero" id="top">
+      <div class="hero-media">
+        <img src="img/hero.jpg" alt="Vice City skyline at sunset seen across the bay" id="heroImg" />
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="overline">
+          <span class="dot" aria-hidden="true"></span>
+          Out now · 19 November 2026
+        </p>
+
+        <h1 class="title">
+          <span class="title-line">Grand Theft Auto</span>
+          <span class="title-vi" data-text="VI">VI</span>
+        </h1>
+
+        <p class="tagline">
+          Vice City. Two outlaws. <em>One state of mind.</em>
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="trailerBtn" type="button">
+            <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5-9-5.5Z" fill="currentColor"/></svg>
+            Watch trailer
+          </button>
+          <a class="btn btn-ghost" href="#leonida">Explore Leonida</a>
+        </div>
+
+        <ul class="platforms">
+          <li>
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M9.4 1.5 7.8 4.6l2.6 1.3L12 3.1 9.4 1.5Zm5.2 1-1.7 3 2.6 1.5 1.9-2.9-2.8-1.6Z"/><path d="M12 5.6 4.6 9.4c-1 .5-1.6 1.5-1.6 2.6v3.1c0 1.3 1.1 2.4 2.4 2.4h13.2c1.3 0 2.4-1.1 2.4-2.4V12c0-1.1-.6-2.1-1.6-2.6L12 5.6Zm-3.2 5.1c.8 0 1.5.6 1.5 1.4s-.7 1.4-1.5 1.4-1.4-.6-1.4-1.4.6-1.4 1.4-1.4Zm6.4 0c.8 0 1.4.6 1.4 1.4s-.6 1.4-1.4 1.4-1.5-.6-1.5-1.4.7-1.4 1.5-1.4Z"/></svg>
+            PlayStation 5
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M7.4 6.2c1.5 0 2.6.9 2.6 2.5v3.5h.1l1.6-2.6c.4-.7 1-1.1 1.8-1.1 1.1 0 1.9.8 1.9 1.9 0 .5-.1 1-.4 1.5l-.9 1.5 1.2 2 .1.1c.3-.7.9-1.2 1.7-1.2 1 0 1.8.8 1.8 1.8s-.8 1.8-1.8 1.8c-1.2 0-1.9-.8-2.2-1.8h-.1l-1.9-3.1-.1.1c-.4.7-1.1 1.2-2 1.2-1 0-1.8-.6-2.1-1.4H9.5v2c0 1.9-1.3 3-3 3s-2.9-1.2-2.9-3v-2.4c0-.6-.2-1.1-.6-1.6l-.5-.6v-.1c.6-.8 1-1.7 1-2.6V9c0-1.7 1.4-2.8 3-2.8Z"/><path d="M8 1.2c1.3 0 2.3 1 2.3 2.3V5H5.6V3.5C5.6 2.2 6.7 1.2 8 1.2Z"/></svg>
+            Xbox Series X|S
+          </li>
+        </ul>
+      </div>
+
+      <aside class="hero-side">
+        <div class="hero-countdown">
+          <span class="cd-label">Out for</span>
+          <div class="cd-values" id="uptime">
+            <div><b id="coDays">00</b><span>days</span></div>
+            <div><b id="coHours">00</b><span>hrs</span></div>
+            <div><b id="coMins">00</b><span>min</span></div>
+            <div><b id="coSecs">00</b><span>sec</span></div>
+          </div>
+          <p class="cd-note">Release: 19 Nov 2026 · PC: TBA</p>
+        </div>
+        <a class="hero-scroll" href="#story">
+          <span>Scroll</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </aside>
+    </section>
+
+    <!-- ── marquee ───────────────────────────────────────────────────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Vice City</span><b>◆</b><span>Leonida Keys</span><b>◆</b><span>Grassrivers</span><b>◆</b>
+          <span>Port Gellhorn</span><b>◆</b><span>Ambrosia</span><b>◆</b><span>Mount Kalaga</span><b>◆</b>
+          <span>Vice Beach</span><b>◆</b><span>Leonida</span><b>◆</b>
+        </div>
+        <div class="marquee-group">
+          <span>Vice City</span><b>◆</b><span>Leonida Keys</span><b>◆</b><span>Grassrivers</span><b>◆</b>
+          <span>Port Gellhorn</span><b>◆</b><span>Ambrosia</span><b>◆</b><span>Mount Kalaga</span><b>◆</b>
+          <span>Vice Beach</span><b>◆</b><span>Leonida</span><b>◆</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── story ─────────────────────────────────────────────────────── -->
+    <section class="section story" id="story">
+      <div class="story-grid">
+        <div class="story-copy">
+          <p class="eyebrow reveal"><span>01</span> The story</p>
+          <h2 class="h2 reveal">
+            Two outlaws.<br />
+            <em>One state of mind.</em>
+          </h2>
+          <p class="lead reveal">
+            Lucia and Jason are in love — and in trouble. Somewhere between the
+            neon of Vice City and the backroads of Leonida, they discover that
+            the only way out is to make one more score.
+          </p>
+          <p class="body reveal">
+            Grand Theft Auto VI takes the series to the state of Leonida, home to
+            the neon-soaked streets of Vice City and beyond. The biggest, most
+            immersive evolution of the series yet — built on the next generation
+            of the RAGE engine.
+          </p>
+
+          <dl class="fact-row reveal">
+            <div><dt>Release</dt><dd>19 Nov 2026</dd></div>
+            <div><dt>Platforms</dt><dd>PS5 · Xbox X|S</dd></div>
+            <div><dt>Setting</dt><dd>Leonida, USA</dd></div>
+          </dl>
+        </div>
+
+        <figure class="story-art reveal">
+          <img src="img/poster.jpg" alt="A vintage convertible speeding along the coast at dusk" loading="lazy" data-parallax-img />
+          <figcaption>
+            <span class="cap-tag">04:12 AM</span>
+            Ocean Drive, Vice Beach
+          </figcaption>
+          <div class="frame-line" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── leonida ───────────────────────────────────────────────────── -->
+    <section class="section leonida" id="leonida">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal"><span>02</span> Places</p>
+          <h2 class="h2 reveal">Welcome to<br /><em>Leonida.</em></h2>
+        </div>
+        <p class="head-note reveal">
+          A whole state to get lost in: the city, the keys, the wetlands and the
+          towns in between. Every road has something waiting on it.
+        </p>
+      </div>
+
+      <div class="places">
+        <article class="place place-wide reveal">
+          <img src="img/vice-city.jpg" alt="Neon-lit art deco street at night with wet reflections" loading="lazy" />
+          <div class="place-info">
+            <span class="place-num">2.1</span>
+            <h3>Vice City</h3>
+            <p>Art deco, pink neon and old money. The city that never really
+              sleeps, only changes shifts.</p>
+            <span class="place-tag">Urban</span>
+          </div>
+        </article>
+
+        <article class="place reveal">
+          <img src="img/keys.jpg" alt="A causeway road winding between turquoise water and pastel houses" loading="lazy" />
+          <div class="place-info">
+            <span class="place-num">2.2</span>
+            <h3>Leonida Keys</h3>
+            <p>Causeways, pastel houses and water warm enough to forget your
+              problems in.</p>
+            <span class="place-tag">Coastal</span>
+          </div>
+        </article>
+
+        <article class="place reveal">
+          <img src="img/poster.jpg" alt="A car on a coastal road at sunset" loading="lazy" />
+          <div class="place-info">
+            <span class="place-num">2.3</span>
+            <h3>Grassrivers</h3>
+            <p>Wetlands, airboats and the kind of quiet that hides things
+              extremely well.</p>
+            <span class="place-tag">Wild</span>
+          </div>
+        </article>
+
+        <article class="place place-wide reveal">
+          <img src="img/hero.jpg" alt="Skyline across the water at sunset" loading="lazy" />
+          <div class="place-info">
+            <span class="place-num">2.4</span>
+            <h3>Port Gellhorn &amp; the Coast</h3>
+            <p>Sun-bleached highways and small towns where everyone knows your
+              business before you do.</p>
+            <span class="place-tag">Open road</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── features ──────────────────────────────────────────────────── -->
+    <section class="section features" id="features">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal"><span>03</span> What's new</p>
+          <h2 class="h2 reveal">Built for<br /><em>the next era.</em></h2>
+        </div>
+        <p class="head-note reveal">
+          Nine years in the making, on hardware the series was never able to
+          reach before.
+        </p>
+      </div>
+
+      <div class="feat-grid">
+        <article class="feat-card reveal">
+          <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 17V8l6 4 3-2 3 2 6-4v9"/><path d="M3 20h18"/></svg>
+          </div>
+          <h3>A living state</h3>
+          <p>Crowds, traffic and weather that react to each other. Walk into a
+            situation and it keeps happening without you.</p>
+        </article>
+
+        <article class="feat-card reveal">
+          <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8.5" cy="9" r="3"/><circle cx="16.5" cy="15" r="3"/><path d="M3 20c0-3 2.5-5 5.5-5"/><path d="M21 4c-3 0-5 2-5.5 5"/></svg>
+          </div>
+          <h3>Two protagonists</h3>
+          <p>Switch between Lucia and Jason on the fly. Different lives,
+            different crews, one story pulling them together.</p>
+        </article>
+
+        <article class="feat-card reveal">
+          <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="M7 10v3M12 8v5M17 10v3"/></svg>
+          </div>
+          <h3>Next-gen RAGE</h3>
+          <p>Ray-traced light, dense detail and a framerate that keeps up when
+            everything goes wrong at once.</p>
+        </article>
+
+        <article class="feat-card reveal">
+          <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 16V9a2 2 0 0 1 2-2h8l4 4v5"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/><path d="M4 12h10"/></svg>
+          </div>
+          <h3>Drive everything</h3>
+          <p>Boats through the keys, bikes through the wetlands, and a whole
+            city that handles like it means it.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── media ─────────────────────────────────────────────────────── -->
+    <section class="media" id="media">
+      <div class="media-inner">
+        <p class="eyebrow reveal"><span>04</span> Media</p>
+        <h2 class="h2 media-title reveal">The city is <em>waiting.</em></h2>
+
+        <button class="media-card reveal" id="mediaPlay" type="button" aria-label="Play the Vice City trailer">
+          <img src="img/vice-city.jpg" alt="" loading="lazy" />
+          <span class="media-veil" aria-hidden="true"></span>
+          <span class="play-ring" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5-9-5.5Z" fill="currentColor"/></svg>
+          </span>
+          <span class="media-meta">
+            <b>Trailer 2 — Vice City</b>
+            <i>02:14 · 4K HDR</i>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ── editions ──────────────────────────────────────────────────── -->
+    <section class="section editions" id="editions">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal"><span>05</span> Editions</p>
+          <h2 class="h2 reveal">Pick your<br /><em>way in.</em></h2>
+        </div>
+        <p class="head-note reveal">
+          Available now on PlayStation 5 and Xbox Series X|S. A PC version has
+          not been announced.
+        </p>
+      </div>
+
+      <div class="ed-grid">
+        <article class="ed-card reveal">
+          <div class="ed-top">
+            <span class="ed-tag">Standard</span>
+            <span class="ed-price">$69.99</span>
+          </div>
+          <h3>Grand Theft Auto VI</h3>
+          <p class="ed-sub">The full game, nothing else in the way.</p>
+          <ul class="ed-list">
+            <li>Full single-player campaign</li>
+            <li>All of Leonida, from day one</li>
+            <li>PS5 haptics &amp; 3D audio</li>
+          </ul>
+          <button class="btn btn-outline ed-cta" type="button" data-edition="Standard">Choose Standard</button>
+        </article>
+
+        <article class="ed-card ed-card-hi reveal">
+          <span class="ed-flag">Most popular</span>
+          <div class="ed-top">
+            <span class="ed-tag">Ultimate</span>
+            <span class="ed-price">$99.99</span>
+          </div>
+          <h3>Grand Theft Auto VI<br />Ultimate Edition</h3>
+          <p class="ed-sub">For the ones who move in first.</p>
+          <ul class="ed-list">
+            <li>Everything in Standard</li>
+            <li>Vice Beach penthouse pack</li>
+            <li>Exclusive vehicle &amp; weapon set</li>
+            <li>Leonida soundtrack, digital</li>
+          </ul>
+          <button class="btn btn-primary ed-cta" type="button" data-edition="Ultimate">Choose Ultimate</button>
+        </article>
+      </div>
+
+      <p class="ed-note reveal">
+        Fan-made concept page. Not affiliated with Rockstar Games or Take-Two
+        Interactive. Prices and contents are illustrative.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark">VI</span>
+        <span class="logo-text">Grand Theft Auto</span>
+      </a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#story">Story</a>
+        <a href="#leonida">Leonida</a>
+        <a href="#features">Features</a>
+        <a href="#editions">Editions</a>
+      </nav>
+      <p class="footer-note">Concept design · Built for the web</p>
+    </div>
+  </footer>
+
+  <!-- ── trailer modal ────────────────────────────────────────────────── -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Trailer" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" type="button" data-close aria-label="Close trailer">✕</button>
+      <div class="player">
+        <img src="img/poster.jpg" alt="Trailer still: a convertible on a coastal road at dusk" />
+        <div class="player-ui" aria-hidden="true">
+          <span class="player-live"><i></i> PREVIEW</span>
+          <span class="player-time">02:14</span>
+        </div>
+        <div class="player-bar" aria-hidden="true"><i></i></div>
+      </div>
+      <div class="modal-foot">
+        <div>
+          <b>Grand Theft Auto VI — Trailer 2</b>
+          <span>Vice City · Out now on PS5 and Xbox Series X|S</span>
+        </div>
+        <a class="btn btn-buy" href="#editions" data-close>Buy now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── toast ─────────────────────────────────────────────────────────── -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <style>.boot { display: none !important; }</style>
+  </noscript>
+  <script src="script.js"></script>
+</body>
+</html>

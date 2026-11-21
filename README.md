@@ -18,6 +18,7 @@ python3 -m http.server 8000
 - `style.css` — design tokens, layout, responsive rules, motion
 - `script.js` — progressive enhancements (see below)
 - `logo.svg` / `og.png` — brand mark and social card
+- `gta6/` — standalone concept landing page for GTA VI (see `gta6/README.md`)
 
 ## Behaviour
 
