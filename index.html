@@ -3,61 +3,327 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Klim Nabu</title>
-  <meta name="description" content="Klim Nabu, software developer building things with AI." />
-  <meta property="og:title" content="Klim Nabu" />
-  <meta property="og:description" content="Software developer building things with AI." />
+  <title>Klim Nabu — Software developer building things with AI</title>
+  <meta name="description" content="Klim Nabu, software developer building things with AI. Code, images, 3D, and the occasional experiment." />
+  <meta name="theme-color" content="#0b0d0b" />
+  <meta property="og:title" content="Klim Nabu — Software developer building things with AI" />
+  <meta property="og:description" content="Code, images, 3D, and the occasional experiment." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://klimnabu.github.io/" />
   <meta property="og:image" content="https://klimnabu.github.io/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <div class="shell">
-    <header class="nav">
-      <a class="brand" href="#top"><img src="logo.svg" alt="Logo" width="34" height="34" /></a>
-      <nav class="pills">
-        <a class="pill" href="#top">Home</a>
-        <a class="pill" href="#work">Work</a>
-        <a class="pill" href="#stack">Stack</a>
-        <a class="pill" href="#contact">Contact</a>
+  <a class="skip-link" href="#work">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Klim Nabu, back to top">
+        <img src="logo.svg" alt="" width="36" height="36" />
+        <span class="brand-name">KLIM<em>NABU</em></span>
+      </a>
+
+      <nav class="pills" aria-label="Primary">
+        <a class="pill is-active" href="#top" data-link>Home</a>
+        <a class="pill" href="#work" data-link>Work</a>
+        <a class="pill" href="#stack" data-link>Stack</a>
+        <a class="pill" href="#contact" data-link>Contact</a>
       </nav>
-      <a class="btn-lime nav-cta" href="#contact">Say Hi</a>
-    </header>
 
-    <main id="top" class="hero">
-      <div class="hero-copy">
-        <h1 class="display"><span class="lime">Build</span><br />The Future<span class="dot">.</span></h1>
-        <p class="sub">Software developer building things with AI.<br />Code, images, 3D, and the occasional experiment.</p>
-        <div class="cta">
-          <a class="btn-lime big" href="#work">See my work <span class="plus">+</span></a>
-        </div>
-        <div class="badge">
-          <div class="badge-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z" fill="#171914"/></svg>
+      <div class="nav-actions">
+        <a class="btn-lime nav-cta" href="mailto:hello@klimnabu.dev">
+          Say hi <span class="arrow">↗</span>
+        </a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#top" data-link>Home</a>
+      <a href="#work" data-link>Work</a>
+      <a href="#stack" data-link>Stack</a>
+      <a href="#contact" data-link>Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ───────────────────────────── HERO ───────────────────────────── -->
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="live-dot" aria-hidden="true"></span>
+            Open to interesting work · Berlin
+          </p>
+
+          <h1 class="display reveal">
+            <span class="lime">Build</span><br />
+            The Future<span class="dot">.</span>
+          </h1>
+
+          <p class="sub reveal">
+            Software developer building things with AI.
+            <span>Code, images, 3D, and the occasional experiment.</span>
+          </p>
+
+          <div class="cta reveal">
+            <a class="btn-lime big" href="#work">See my work <span class="plus">+</span></a>
+            <a class="btn-ghost" href="https://github.com/klimnabu" target="_blank" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.72-4.04-1.42-4.04-1.42-.55-1.38-1.34-1.75-1.34-1.75-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.64-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
+              GitHub
+            </a>
           </div>
-          <div class="badge-text"><strong>Open source</strong><span>GITHUB @KLIMNABU</span></div>
+
+          <dl class="stats reveal">
+            <div><dt>Focus</dt><dd>AI&nbsp;products</dd></div>
+            <div><dt>Craft</dt><dd>Web + 3D</dd></div>
+            <div><dt>Mode</dt><dd>Open source</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="ring ring-a" aria-hidden="true"></div>
+          <div class="ring ring-b" aria-hidden="true"></div>
+          <img class="mark" src="logo.svg" alt="Klim Nabu logo" width="360" height="360" />
+          <span class="orbit-chip chip-1">shaders</span>
+          <span class="orbit-chip chip-2">LLMs</span>
+          <span class="orbit-chip chip-3">three.js</span>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="halo" aria-hidden="true"></div>
-        <img class="mark" src="logo.svg" alt="Klim Nabu logo" width="360" height="360" />
+      <div class="giant" aria-hidden="true">
+        <span class="lime">Code</span> <span class="fade">&amp; Create</span>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────── TICKER ──────────────────────────── -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>AI tools</span><i></i><span>Web projects</span><i></i><span>Experiments</span><i></i>
+          <span>Generative images</span><i></i><span>3D interfaces</span><i></i><span>Open source</span><i></i>
+        </div>
+        <div class="ticker-group">
+          <span>AI tools</span><i></i><span>Web projects</span><i></i><span>Experiments</span><i></i>
+          <span>Generative images</span><i></i><span>3D interfaces</span><i></i><span>Open source</span><i></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────────────────────── WORK ───────────────────────────── -->
+    <section class="section" id="work">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal"><span class="kicker">01</span> Selected work</p>
+          <h2 class="h2 reveal">Things I build,<br /><span class="fade">and keep building.</span></h2>
+        </div>
+        <p class="section-note reveal">
+          Three lanes I keep coming back to: tooling that puts AI to work,
+          interfaces that feel good to use, and experiments that exist just to
+          find out what happens.
+        </p>
       </div>
 
-      <aside class="hero-cards">
-        <a class="mini" href="#work"><div class="mini-img g1"><img src="logo.svg" alt="" width="54" height="54" /></div><div class="mini-row"><span>AI tools</span><span>01</span></div></a>
-        <a class="mini" href="#work"><div class="mini-img g2"><img src="logo.svg" alt="" width="54" height="54" /></div><div class="mini-row"><span>Web projects</span><span>02</span></div></a>
-        <a class="mini" href="#stack"><div class="mini-img g3"><img src="logo.svg" alt="" width="54" height="54" /></div><div class="mini-row"><span>Experiments</span><span>03</span></div></a>
-        <div class="arrows" aria-hidden="true"><span>&larr;</span><span>&rarr;</span></div>
-      </aside>
+      <div class="cards">
+        <a class="card reveal" href="https://github.com/klimnabu" target="_blank" rel="noopener" data-tilt>
+          <div class="card-art art-1" aria-hidden="true">
+            <div class="art-grid"></div>
+            <div class="orb"></div>
+            <span class="art-tag">AI</span>
+          </div>
+          <div class="card-body">
+            <span class="card-num">01</span>
+            <h3>AI tools</h3>
+            <p>Small, sharp utilities that put models to work: agents, image
+              pipelines, and the glue that makes them usable day to day.</p>
+            <div class="tags"><span>TypeScript</span><span>Python</span><span>APIs</span></div>
+            <span class="card-link">Explore <b>↗</b></span>
+          </div>
+        </a>
 
-      <div class="giant" aria-hidden="true"><span class="lime">Code</span><br /><span class="fade">&amp; Create</span></div>
-    </main>
-  </div>
+        <a class="card reveal" href="https://github.com/klimnabu" target="_blank" rel="noopener" data-tilt>
+          <div class="card-art art-2" aria-hidden="true">
+            <div class="art-grid"></div>
+            <div class="orb"></div>
+            <span class="art-tag">WEB</span>
+          </div>
+          <div class="card-body">
+            <span class="card-num">02</span>
+            <h3>Web projects</h3>
+            <p>Fast, accessible front ends. Typography that carries the page,
+              motion that means something, and not a byte more than needed.</p>
+            <div class="tags"><span>React</span><span>CSS</span><span>Node</span></div>
+            <span class="card-link">Explore <b>↗</b></span>
+          </div>
+        </a>
+
+        <a class="card reveal" href="https://github.com/klimnabu" target="_blank" rel="noopener" data-tilt>
+          <div class="card-art art-3" aria-hidden="true">
+            <div class="art-grid"></div>
+            <div class="orb"></div>
+            <span class="art-tag">LAB</span>
+          </div>
+          <div class="card-body">
+            <span class="card-num">03</span>
+            <h3>Experiments</h3>
+            <p>Shaders, generative imagery, 3D scenes — playgrounds where the
+              goal is simply to see whether an idea holds up in motion.</p>
+            <div class="tags"><span>Three.js</span><span>GLSL</span><span>WebGL</span></div>
+            <span class="card-link">Explore <b>↗</b></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────── STACK ──────────────────────────── -->
+    <section class="section stack-section" id="stack">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow reveal"><span class="kicker">02</span> Toolbox</p>
+          <h2 class="h2 reveal">The stack<br /><span class="fade">behind the work.</span></h2>
+        </div>
+        <p class="section-note reveal">
+          Boring tools where boring wins, new tools where the payoff is real.
+          Everything below is something I reach for without thinking.
+        </p>
+      </div>
+
+      <div class="stack">
+        <div class="stack-col reveal">
+          <h3>Languages</h3>
+          <ul>
+            <li>TypeScript</li><li>JavaScript</li><li>Python</li>
+            <li>HTML &amp; CSS</li><li>GLSL</li><li>SQL</li>
+          </ul>
+        </div>
+        <div class="stack-col reveal">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React</li><li>Next.js</li><li>Svelte</li>
+            <li>Tailwind</li><li>Canvas / SVG</li><li>Three.js</li>
+          </ul>
+        </div>
+        <div class="stack-col reveal">
+          <h3>AI &amp; data</h3>
+          <ul>
+            <li>OpenAI API</li><li>LangChain</li><li>Vector DBs</li>
+            <li>Prompt design</li><li>Diffusion models</li><li>RAG</li>
+          </ul>
+        </div>
+        <div class="stack-col reveal">
+          <h3>Tools</h3>
+          <ul>
+            <li>Git &amp; GitHub</li><li>Vite</li><li>Docker</li>
+            <li>Vercel</li><li>Figma</li><li>Blender</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── APPROACH ────────────────────────── -->
+    <section class="section approach" id="approach">
+      <div class="approach-grid">
+        <div class="approach-copy">
+          <p class="eyebrow reveal"><span class="kicker">03</span> Approach</p>
+          <h2 class="h2 reveal">Ship it. Then<br /><span class="fade">make it good.</span></h2>
+          <p class="section-note reveal">
+            I like the loop where a rough idea runs end to end on day one and
+            every pass after that is about removing friction — fewer clicks,
+            faster loads, clearer words.
+          </p>
+
+          <ol class="principles">
+            <li class="reveal">
+              <span class="p-num">01</span>
+              <div>
+                <h3>Working beats perfect</h3>
+                <p>A version you can click teaches you more than a spec you can argue about.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="p-num">02</span>
+              <div>
+                <h3>Defaults are design</h3>
+                <p>The first thing a person sees — and the first thing they can undo — sets the tone.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="p-num">03</span>
+              <div>
+                <h3>Keep it legible</h3>
+                <p>Code, copy and UI all get read by someone else. Optimise for that someone.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="profile reveal">
+          <div class="profile-top">
+            <img src="logo.svg" alt="" width="72" height="72" />
+            <span class="profile-status"><span class="live-dot" aria-hidden="true"></span> Building</span>
+          </div>
+          <p class="profile-quote">
+            “Most of what I make starts as a throwaway script and ends up
+            something people use.”
+          </p>
+          <ul class="profile-meta">
+            <li><span>Based in</span><strong>Berlin, DE</strong></li>
+            <li><span>Focus</span><strong>AI × interface</strong></li>
+            <li><span>Currently</span><strong>Side projects</strong></li>
+            <li><span>Elsewhere</span><strong><a href="https://github.com/klimnabu" target="_blank" rel="noopener">GitHub ↗</a></strong></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────── CONTACT ─────────────────────────── -->
+    <section class="contact" id="contact">
+      <p class="eyebrow reveal"><span class="kicker">04</span> Contact</p>
+      <h2 class="contact-title reveal">
+        Let's build<br /><span class="lime">something.</span>
+      </h2>
+      <p class="contact-sub reveal">
+        Have a project, a half-formed idea, or just want to compare notes on
+        building with AI? My inbox is open.
+      </p>
+      <div class="contact-cta reveal">
+        <a class="btn-lime big" href="mailto:hello@klimnabu.dev">
+          hello@klimnabu.dev <span class="plus">→</span>
+        </a>
+        <button class="btn-ghost copy-btn" id="copyEmail" type="button" data-email="hello@klimnabu.dev">
+          <span>Copy address</span>
+        </button>
+      </div>
+      <div class="socials reveal">
+        <a href="https://github.com/klimnabu" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+        <a href="https://github.com/klimnabu" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+        <a href="https://github.com/klimnabu" target="_blank" rel="noopener">X / Twitter <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="brand" href="#top">
+        <img src="logo.svg" alt="" width="28" height="28" />
+        <span class="brand-name">KLIM<em>NABU</em></span>
+      </a>
+      <p>© <span id="year">2025</span> Klim Nabu · Built for the web, no build step.</p>
+      <a class="back-top" href="#top">Back to top <span>↑</span></a>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
